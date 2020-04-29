@@ -1,4 +1,4 @@
-import { rotate, rotateSixAxis } from './animate.js';
+import * as animate from './animate.js';
 import { square } from './shapes.js';
 
 export function drawScene(gl, programInfo, buffers, rotation) {
@@ -45,7 +45,7 @@ export function drawScene(gl, programInfo, buffers, rotation) {
 
 
     // animate
-    rotateSixAxis(mat4, modelViewMatrix, rotation)
+    animate.rotateSixAxis(mat4, modelViewMatrix, rotation)
 
 
     // Tell WebGL how to pull out the positions from the position
@@ -107,14 +107,14 @@ export function drawScene(gl, programInfo, buffers, rotation) {
         false,
         modelViewMatrix);
 
-
+    /*
     // used for 2d
     {
         const offset = 0;
         const vertexCount = 4;
         gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertexCount);
     }
-
+    */
     // used for 3d
     {
         const vertexCount = 36;

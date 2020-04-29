@@ -6,5 +6,5 @@ export function rotate(mat4, modelViewMatrix, rotation) {
 };
 
 export function rotateSixAxis(mat4, modelViewMatrix, rotation) {
-    mat4.rotate(modelViewMatrix, modelViewMatrix, rotation * .7, [0.5, 0.5, 0.5]);
+    mat4.rotate(modelViewMatrix, modelViewMatrix, rotation * .1, [0.2, 0.3, 0.4]);
 };

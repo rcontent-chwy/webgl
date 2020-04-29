@@ -14,9 +14,9 @@ function main() {
     }
 
     // Set clear color to black, fully opaque
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    //gl.clearColor(0.0, 0.0, 0.0, 1.0);
     // Clear the color buffer with specified clear color
-    gl.clear(gl.COLOR_BUFFER_BIT);
+    //gl.clear(gl.COLOR_BUFFER_BIT);
 
     const shaderProgram = getShaderProgram(gl);
 
@@ -43,7 +43,7 @@ function main() {
       const deltaTime = now - then;
       then = now;
   
-      drawScene(gl, programInfo, buffers, rotation);
+      drawScene(gl, programInfo, buffers, rotation*3);
   
       requestAnimationFrame(render);
       rotation += deltaTime;
